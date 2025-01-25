@@ -11,6 +11,9 @@ ORDER BY
     trip_distance DESC;
 ```
 
+<img width="1512" alt="Longest Trip" src="https://github.com/user-attachments/assets/8f6a236b-f95d-46c9-a5b2-9872e25d6671" />
+
+
 ### Biggest pickup zones
 ```
 SELECT
@@ -30,6 +33,9 @@ HAVING
     SUM(g.total_amount) > 13000;
 ```
 
+<img width="1512" alt="Biggest pickup zones" src="https://github.com/user-attachments/assets/3b0d628b-8f3f-44b6-bb8d-6545d3eba6f8" />
+
+
 ### Largest tip
 ```
 SELECT joined_table.pickup_zone, joined_table.tip_amount, filtered_lookup.dropoff_zone
@@ -45,3 +51,5 @@ FROM (
 WHERE filtered_lookup."LocationID" = joined_table."DOLocationID"
 ORDER BY joined_table.tip_amount DESC;
 ```
+
+<img width="1512" alt="Largest tip" src="https://github.com/user-attachments/assets/3714b147-d8a7-4287-8336-3179242e6475" />
